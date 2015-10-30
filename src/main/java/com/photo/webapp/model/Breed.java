@@ -10,6 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -23,11 +25,9 @@ public class Breed {
     @GeneratedValue
     private int breedId;
 
-    /*
-    @Type(type = AnimalTypeType.CLASS_NAME)
-    @Column
+    @ManyToOne
+    @JoinColumn(name = "animalType")
     private AnimalType animalType;
-    */
 
     @Column
     private String breed;
@@ -44,14 +44,13 @@ public class Breed {
         this.breedId = breedId;
     }
 
-    /*
     public AnimalType getAnimalType() {
         return animalType;
     }
 
     public void setAnimalType(AnimalType animalType) {
         this.animalType = animalType;
-    }*/
+    }
 
     public String getBreed() {
         return breed;
