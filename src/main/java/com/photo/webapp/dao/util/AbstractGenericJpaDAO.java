@@ -1,4 +1,4 @@
-package com.photo.webapp.dao;
+package com.photo.webapp.dao.util;
 
 import java.io.Serializable;
 
