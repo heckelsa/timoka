@@ -9,7 +9,7 @@ import java.io.Serializable;
  *            Die Klasse der Entität
  * @param <PrimaryKey>
  *            Die Klasse des primären Key
- * @see com.photo.webapp.dao.GenericDAO
+ * @see com.photo.webapp.dao.util.GenericDAO
  */
 public interface GenericJpaDAO<Entity, PrimaryKey extends Serializable> extends
 		GenericDAO<Entity, PrimaryKey> {
