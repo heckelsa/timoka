@@ -20,6 +20,27 @@ public class AnimalDAO extends AbstractGenericJpaDAO<Animal, Integer> {
 
 
     /**
+     *
+     * @param name
+     * @return
+     */
+    public List<Animal> findByName(String name){
+        return getEntityManager().createNamedQuery(Animal.FIND_ALL, Animal.class).setParameter("name", name)
+                       .getResultList();
+    }
+
+    /**
+     *
+     * @param breed
+     * @return
+     */
+    public List<Animal> findByBreed(String breed){
+        return getEntityManager().createNamedQuery(Animal.FIND_ALL, Animal.class).setParameter("breed", breed)
+                       .getResultList();
+    }
+
+
+    /**
      * Search for all Animals.
      * @return a List of all Animals
      */
