@@ -19,8 +19,8 @@ import java.util.Date;
 @Access(AccessType.FIELD)
 public class Animal {
 
-    /** Konstante für die NamedQuery. */
-   	public static final String FIND_ALL = "Animal.findAll";
+    // Constant for named query
+    public static final String FIND_ALL = "Animal.findAll";
 
 
     @Column(nullable = false)

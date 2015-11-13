@@ -27,17 +27,27 @@ public class AnimalModel {
     @Autowired
     private AnimalDAO animalDAO;
 
+    /**
+     * @return
+     */
     @Transactional(propagation = Propagation.SUPPORTS)
-    public List<Animal> getAllAnimals(){
+    public List<Animal> getAllAnimals() {
         return animalDAO.findAll();
     }
 
+    /**
+     * @param animalId
+     * @return
+     */
     @Transactional(propagation = Propagation.SUPPORTS)
     public Animal getAnimal(Integer animalId) {
         return animalDAO.findByPrimaryKey(animalId);
     }
 
-
+    /**
+     * @param name
+     * @return
+     */
     public Integer createAnimal(String name) {
         Animal animal = new Animal();
         animal.setName(name);
@@ -45,24 +55,30 @@ public class AnimalModel {
         return create(animal);
     }
 
-
+    /**
+     * @param animal
+     * @return
+     */
     public Integer create(Animal animal) {
         return animalDAO.create(animal);
     }
 
+    /**
+     * @param animal
+     * @return
+     */
     public Animal save(Animal animal) {
         animalDAO.save(animal);
         return animal;
     }
 
-
+    /*
     public Animal addOwnerToAnimal(Integer animalId, Owner owner) {
         Animal animal = animalDAO.findByPrimaryKey(animalId);
         //animal.getOwner.add(owner);
 
         return save(animal);
-   	}
-
+   	}*/
 
 
 }
