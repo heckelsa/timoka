@@ -9,6 +9,10 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/animal")
 public class AnimalController {
 
+    // @Autowired
+    //private AnimalDAO animalDAO; // Das ist NICHT schön!, Da greifen wir jetzt ohne Business-Schicht von der DAO
+    // direkt auf den View zu! Es gibt keinen Service-Layer. Nur in seltenen Fällen zu verwenden.
+
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView showAnimal(){
 
