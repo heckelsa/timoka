@@ -30,6 +30,9 @@ public class Owner {
     private String name;
 
     @Column
+    private String firstname;
+
+    @Column
     private String street;
 
     @Column
@@ -66,6 +69,14 @@ public class Owner {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
     public String getStreet() {
