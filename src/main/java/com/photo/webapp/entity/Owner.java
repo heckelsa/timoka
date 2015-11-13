@@ -1,4 +1,4 @@
-package com.photo.webapp.model;
+package com.photo.webapp.entity;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.ArrayList;

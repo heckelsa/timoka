@@ -1,13 +1,12 @@
 package com.photo.webapp.dao;
 
 import com.photo.webapp.dao.util.AbstractGenericJpaDAO;
-import com.photo.webapp.model.Animal;
+import com.photo.webapp.entity.Animal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.Entity;
 import java.util.List;
 
 @Repository

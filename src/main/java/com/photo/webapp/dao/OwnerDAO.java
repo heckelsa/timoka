@@ -1,7 +1,7 @@
 package com.photo.webapp.dao;
 
 import com.photo.webapp.dao.util.AbstractGenericJpaDAO;
-import com.photo.webapp.model.Owner;
+import com.photo.webapp.entity.Owner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;

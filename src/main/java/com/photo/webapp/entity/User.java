@@ -1,4 +1,4 @@
-package com.photo.webapp.model;
+package com.photo.webapp.entity;
 
 import org.hibernate.annotations.Type;
 
