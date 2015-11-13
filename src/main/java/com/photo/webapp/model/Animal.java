@@ -21,6 +21,7 @@ public class Animal {
 
     // Constant for named query
     public static final String FIND_ALL = "Animal.findAll";
+    public static final String FIND_BY_NAME = "Animal.findByName";
 
 
     @Column(nullable = false)
