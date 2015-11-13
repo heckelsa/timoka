@@ -7,20 +7,16 @@
 
 <div>
     <div>
+        <div>Art:</div>
+        <div>${type}</div>
+    </div>
+    <div>
         <div>Name:</div>
         <div>${name}</div>
     </div>
     <div>
-        <div>Art:</div>
-        <div>TYPE</div>
-    </div>
-    <div>
         <div>Rasse:</div>
-        <div>BREED</div>
-    </div>
-    <div>
-        <div>Geburtstag:</div>
-        <div>BIRTHDAY</div>
+        <div>${breed}</div>
     </div>
 </div>
 
