@@ -13,17 +13,18 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table(schema = "timoka")
 @Access(AccessType.FIELD)
-@NamedQueries({@NamedQuery(name = Animal.FIND_ALL, query = "from Animal p"),
-               @NamedQuery(name = Animal.FIND_BY_NAME, query = "from Animal p where name = :p_name")})  // Damit
+//@NamedQueries({@NamedQuery(name = Animal.FIND_ALL, query = "from Animal p"),
+               //@NamedQuery(name = Animal.FIND_BY_NAME, query = "from Animal p where name = :p_name")})  // Damit
                // kann man eigene SQL-Queries zusammen bauen. Das hier ist nur ein sehr einfaches Beispiel, welches
                // auch sehr einfach mit Hibernate aufgerufen werden kann.
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Animal {
+public class Animal implements Serializable {
 
     // Constant for named query
     public static final String FIND_ALL = "Animal.findAll";

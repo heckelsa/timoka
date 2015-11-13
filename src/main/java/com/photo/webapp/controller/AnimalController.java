@@ -1,25 +1,42 @@
 package com.photo.webapp.controller;
 
+import com.photo.webapp.entity.Animal;
+import com.photo.webapp.services.AnimalService;
+import com.photo.webapp.services.impl.AnimalServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import sun.util.calendar.Gregorian;
+import sun.util.calendar.LocalGregorianCalendar;
+
+import java.util.Date;
 
 @Controller
 @RequestMapping("/animal")
 public class AnimalController {
 
-    // @Autowired
-    //private AnimalDAO animalDAO; // Das ist NICHT schön!, Da greifen wir jetzt ohne Business-Schicht von der DAO
-    // direkt auf den View zu! Es gibt keinen Service-Layer. Nur in seltenen Fällen zu verwenden.
+    @Autowired
+    private AnimalService animalService;
 
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView showAnimal(){
 
         ModelAndView model = new ModelAndView("Animal");
-        model.addObject("type", "Hund");
-        model.addObject("name", "Bruno");
-        model.addObject("breed", "Australian Shepherd");
+
+        Animal animal = new Animal();
+        animal.setName("Mahal");
+        animal.setBreed("");
+        animal.setColor("");
+        animal.setGender(1);
+        animal.setBirthdate(new Date());
+        animal.setPhoto("");
+
+
+        animalService.createAnimal(animal);
+        animalService.getAnimalByName("Mahal");
+        model.addObject(animalService);
 
         return model;
     }
