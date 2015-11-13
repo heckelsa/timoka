@@ -2,7 +2,6 @@ package com.photo.webapp.dao;
 
 import com.photo.webapp.dao.util.AbstractGenericJpaDAO;
 import com.photo.webapp.entity.Owner;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,9 +10,6 @@ import java.util.List;
 
 @Repository
 public class OwnerDAO extends AbstractGenericJpaDAO<Owner, Integer> {
-
-    @Autowired
-    private OwnerDAO ownerDAO;
 
     /**
      * {@inheritDoc}
@@ -38,7 +34,7 @@ public class OwnerDAO extends AbstractGenericJpaDAO<Owner, Integer> {
      */
     @Transactional(propagation = Propagation.SUPPORTS)
     public Owner getOwnerById(Integer ownerId) {
-        return ownerDAO.findByPrimaryKey(ownerId);
+        return findByPrimaryKey(ownerId);
     }
 
     /**
