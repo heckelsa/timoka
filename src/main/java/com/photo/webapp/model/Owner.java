@@ -19,6 +19,9 @@ import java.util.Collection;
 @Access(AccessType.FIELD)
 public class Owner {
 
+    // Constant for named query
+    public static final String FIND_ALL = "Owner.findAll";
+
     @Column(nullable = false)
     @Id
     private int ownerId;
